@@ -1015,3 +1015,55 @@ main .services .container .content .info a {
 }
 
 /* Services End */
+/* Skills Start */
+
+main .our-skills {
+	padding-top: var(--main-padding);
+	padding-bottom: var(--main-padding);
+}
+
+main .our-skills .container .content {
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 991px) {
+	main .our-skills .container .content img {
+		display: none;
+	}
+}
+
+main .our-skills .container .content .skills {
+	flex: 1;
+}
+
+main .our-skills .container .content .skill h3 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main .our-skills .container .content .skill h3 span {
+	color: var(--main-color);
+	font-size: 12px;
+	border: 1px solid #ccc;
+	padding: 3px 5px;
+	border-radius: 5px;
+}
+
+main .our-skills .container .content .skill .progress {
+	background-color: #eeeeee;
+	padding: 15px;
+	margin: 20px 0;
+	position: relative;
+}
+
+main .our-skills .container .content .skill .progress span {
+	height: 100%;
+	background-color: var(--main-color);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Skills End */
