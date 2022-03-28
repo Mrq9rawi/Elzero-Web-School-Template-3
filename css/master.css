@@ -914,4 +914,104 @@ main .team-members .content .box .text-content h2 {
 main .team-members .content .box:hover .text-content h2 {
 	color: #808080;
 }
+
 /* Team Members End */
+/* Services Start */
+
+main .services {
+	padding-top: var(--main-padding);
+	padding-bottom: var(--main-padding);
+	background-color: var(--section-background-color);
+}
+
+main .services .container .content {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 40px;
+}
+
+main .services .container .content .box {
+	padding-top: 30px;
+	background-color: white;
+	box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+	counter-increment: services;
+	position: relative;
+	transition: var(--main-transition);
+}
+
+main .services .container .content .box:hover {
+	transform: translateY(-10px);
+}
+
+main .services .container .content .box::before {
+	content: "";
+	background-color: var(--main-color);
+	width: 0%;
+	height: 3px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: var(--main-transition);
+}
+
+main .services .container .content .box:hover::before {
+	width: 100%;
+}
+
+main .services .container .content .box .icon {
+	text-align: center;
+}
+
+main .services .container .content .box .icon i {
+	color: #d5d5d5;
+	margin-bottom: 20px;
+}
+
+main .services .container .content .box .icon h2 {
+	color: var(--main-color);
+	font-size: 25px;
+	font-weight: 700;
+	margin-bottom: 40px;
+}
+
+main .services .container .content .info {
+	background-color: #f9f9f9;
+	text-align: right;
+	padding: 15px;
+	position: relative;
+}
+
+main .services .container .content .info::before {
+	content: "0" counter(services);
+	position: absolute;
+	background-color: var(--main-color);
+	color: white;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 15px;
+}
+
+main .services .container .content .info::after {
+	content: "";
+	width: 50px;
+	height: 100%;
+	background-color: #d5d5d5;
+	position: absolute;
+	top: 0;
+	left: 80px;
+	transform: skew(-30deg);
+}
+
+main .services .container .content .info a {
+	color: var(--main-color);
+}
+
+/* Services End */
