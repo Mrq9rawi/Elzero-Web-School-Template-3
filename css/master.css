@@ -602,7 +602,7 @@ main .gallery .container .content .box > div::after {
 	opacity: 0;
 }
 
-main .gallery .container .content .box > div:hover::after {
+main .gallery .container .content .box:hover > div::after {
 	animation: flashing calc(var(--main-transition) + 0.4s);
 }
 
