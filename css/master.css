@@ -146,16 +146,8 @@ a {
 	height: 30px;
 	position: absolute;
 	right: 0;
-	background-image: linear-gradient(
-			135deg,
-			var(--section-background-color) 25%,
-			transparent 25%
-		),
-		linear-gradient(
-			225deg,
-			var(--section-background-color) 25%,
-			transparent 25%
-		);
+	background-image: linear-gradient(135deg, var(--section-background-color) 25%, transparent 25%),
+		linear-gradient(225deg, var(--section-background-color) 25%, transparent 25%);
 	background-size: 30px 30px;
 }
 
@@ -581,8 +573,7 @@ main .gallery .container {
 main .gallery .container .box {
 	padding: 15px;
 	background-color: white;
-	box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
-		0px 2px 4px 0px rgb(0 0 0 / 12%);
+	box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
 }
 
 main .gallery .container .box > div {
@@ -1185,6 +1176,11 @@ main .events .container .content .text-content .counter .unit {
 	text-align: center;
 	border-radius: 10px;
 	width: fit-content;
+	transition: var(--main-transition);
+}
+
+main .events .container .content .text-content .counter .unit:hover {
+	border: 1px solid var(--main-color);
 }
 
 main .events .container .content .text-content .counter .unit > span {
@@ -1230,10 +1226,10 @@ main .events .container .subscribe form {
 }
 
 @media (max-width: 767px) {
-main .events .container .subscribe form {
-	flex-direction: column;
-	border-radius: 0;
-}
+	main .events .container .subscribe form {
+		flex-direction: column;
+		border-radius: 0;
+	}
 }
 
 main .events .container .subscribe form input[type="email"] {
@@ -1246,10 +1242,10 @@ main .events .container .subscribe form input[type="email"] {
 }
 
 @media (max-width: 767px) {
-	main .events .container .subscribe form input[type="email"]{
+	main .events .container .subscribe form input[type="email"] {
 		border-radius: 0;
 	}
-	}
+}
 
 main .events .container .subscribe form input[type="submit"] {
 	border-radius: 50px;
@@ -1263,13 +1259,161 @@ main .events .container .subscribe form input[type="submit"] {
 }
 
 @media (max-width: 767px) {
-	main .events .container .subscribe form input[type="submit"]{
+	main .events .container .subscribe form input[type="submit"] {
 		border-radius: 0;
 	}
-	}
+}
 
 main .events .container .subscribe form input[type="submit"]:hover {
 	background-color: var(--main-alt-color);
 }
 
 /* Events End */
+/* Pricing Start */
+
+main .pricing {
+	padding-top: var(--main-padding);
+	padding-bottom: var(--main-padding);
+	background-color: var(--section-background-color);
+}
+
+main .pricing .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+main .pricing .container .box {
+	background-color: white;
+	box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	position: relative;
+	z-index: 1;
+}
+
+main .pricing .container .box.popular {
+	top: -20px;
+}
+
+@media (max-width: 991.9px) {
+	main .pricing .container .box.popular {
+		top: 0;
+	}
+}
+
+main .pricing .container .box.popular::before {
+	content: "Most Popular";
+	padding: 10px 35px 10px 10px;
+	background-color: var(--main-color);
+	color: white;
+	position: absolute;
+	top: 52.9px;
+	right: -35px;
+	transform: rotate(90deg);
+	font-size: 18px;
+	font-weight: bold;
+}
+
+main .pricing .container .box.popular::after {
+	content: "";
+	width: 35px;
+	height: 35px;
+	background-color: white;
+	position: absolute;
+	top: 130px;
+	right: 22.5px;
+	transform: rotate(45deg);
+	transition: var(--main-transition) 0.05s;
+}
+
+main .pricing .container .box.popular:hover::after {
+	background-color: #f6f6f6;
+}
+
+main .pricing .container .box > *:not(ul) {
+	align-self: center;
+}
+
+main .pricing .container .box h3 {
+	font-size: 25px;
+	font-weight: bold;
+	margin: 30px 0 0;
+	font-size: 25px;
+	letter-spacing: -1px;
+}
+
+main .pricing .container .box img {
+	max-width: 80px;
+}
+
+main .pricing .container .box p {
+	color: #777;
+	text-align: center;
+}
+
+main .pricing .container .box p span {
+	display: block;
+	font-size: 60px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: var(--main-color);
+}
+
+main .pricing .container .box ul::before,
+main .pricing .container .box ul::after {
+	content: "";
+	width: 0%;
+	height: 50%;
+	background-color: #f6f6f6;
+	transition: var(--main-transition);
+	position: absolute;
+	z-index: -1;
+}
+
+main .pricing .container .box ul::before {
+	top: 0;
+	left: 0;
+}
+
+main .pricing .container .box ul::after {
+	bottom: 0;
+	right: 0;
+}
+
+main .pricing .container .box:hover ul::before,
+main .pricing .container .box:hover ul::after {
+	width: 100%;
+}
+
+main .pricing .container .box ul li {
+	padding: 20px;
+	border-top: 1px solid #eee;
+}
+
+main .pricing .container .box ul li::before {
+	font-family: "Font Awesome 6 Free";
+	content: "\f00c";
+	margin-right: 10px;
+	font-weight: 900;
+	color: var(--main-color);
+}
+
+main .pricing .container .box a {
+	margin-bottom: 40px;
+	width: fit-content;
+	border: 2px solid var(--main-color);
+	color: var(--main-color);
+	padding: 15px 20px;
+	border-radius: 10px;
+	font-weight: bold;
+	transition: var(--main-transition);
+}
+
+main .pricing .container .box a:hover {
+	background-color: var(--main-color);
+	color: white;
+}
+
+/* Pricing End */
