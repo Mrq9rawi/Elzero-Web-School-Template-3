@@ -158,7 +158,6 @@ a {
 }
 
 /* Components End */
-
 /* Global Rules End */
 /* Header Start */
 
@@ -340,7 +339,6 @@ header .container nav ul .mega-menu ul li i {
 }
 
 /* Megamenu End */
-
 /* Header End */
 /* Landing Start */
 
@@ -467,6 +465,7 @@ header .container nav ul .mega-menu ul li i {
 }
 
 /* Landing End */
+/* Main Start */
 /* Articles Start */
 
 main .articles {
@@ -1707,3 +1706,119 @@ main .discount .form form input[type="submit"]:hover {
 }
 
 /* Discount End */
+/* Main End */
+/* Footer Start */
+
+footer {
+	background-color: #191919;
+	padding: 70px 0 0;
+}
+
+footer .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 40px;
+	/* text-align: center; */
+}
+
+footer .container .text-content h3 {
+	color: white;
+	font-size: 50px;
+	margin: 0 0 20px;
+}
+
+footer .container .text-content a {
+	background-color: #313131;
+	color: #b9b9b9;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	transition: var(--main-transition);
+	margin-right: 10px;
+}
+
+footer .container .text-content a.facebook:hover {
+	background-color: #1877f2;
+}
+
+footer .container .text-content a.twitter:hover {
+	background-color: #1da1f2;
+}
+
+footer .container .text-content a.youtube:hover {
+	background-color: #ff0000;
+}
+
+footer .container .text-content p {
+	line-height: 2;
+	color: #b9b9b9;
+	margin-top: 10px;
+}
+
+footer .container ul.links li {
+	padding: 15px 0;
+	transition: var(--main-transition);
+}
+
+footer .container ul.links li:not(:last-child) {
+	border-bottom: 1px solid #444;
+}
+
+footer .container ul.links li:hover {
+	padding-left: 10px;
+}
+/*  */
+footer .container ul.links li:hover a {
+	color: white;
+}
+
+footer .container ul.links li a {
+	color: #b9b9b9;
+	transition: var(--main-transition);
+}
+
+footer .container ul.links li i {
+	color: var(--main-color);
+	margin-right: 10px;
+}
+
+footer .container .info {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+footer .container .info > div {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: #b9b9b9;
+	margin-bottom: 30px;
+}
+
+footer .container .info > div i {
+	color: var(--main-color);
+}
+
+footer .container .info > div p {
+	line-height: 1.7;
+	flex: 1;
+}
+
+footer .container .images img {
+	width: 78px;
+	border: 3px solid white;
+	margin: 2px;
+}
+
+footer .copy {
+	padding: 25px 0;
+	text-align: center;
+	color: white;
+	margin: 50px 0 0;
+	border-top: 1px solid #444;
+}
+/* Footer End */
