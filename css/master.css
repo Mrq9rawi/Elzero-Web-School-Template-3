@@ -221,12 +221,6 @@ header .container nav > ul {
 	display: flex;
 }
 
-header .container nav > ul li:hover .mega-menu {
-	opacity: 1;
-	z-index: 100;
-	top: calc(100% + 1px);
-}
-
 header .container nav > ul > li > a {
 	color: black;
 	display: flex;
@@ -284,6 +278,15 @@ header .container nav ul .mega-menu {
 	border-bottom: 5px solid var(--main-color);
 	transition: top var(--main-transition), opacity var(--main-transition);
 	opacity: 0;
+	border-top: 1px solid #e8e8e8;
+
+	/* Use These Properties to Show Megamenu */
+
+	/*
+		opacity: 1;
+		z-index: 100;
+		top: calc(100% + 1px);
+	*/
 }
 
 @media (max-width: 991px) {
@@ -1206,6 +1209,7 @@ main .events .container .content .text-content .counter .unit > span {
 	color: var(--main-color);
 	display: inline-block;
 	text-align: center;
+	font-weight: bold;
 }
 
 main .events .container .content .text-content .counter .unit > p {
@@ -1546,6 +1550,7 @@ main .status .container .box {
 	padding: 30px 15px;
 	text-align: center;
 	position: relative;
+	min-height: 192.5px;
 }
 
 main .status .container .box::before,
@@ -1579,6 +1584,7 @@ main .status .container .box .number {
 	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	transition: 2s;
 }
 
 main .status .container .box p {
