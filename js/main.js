@@ -52,7 +52,12 @@ const eventDays = document.querySelector("main .counter .unit .days");
 const eventHours = document.querySelector("main .counter .unit .hours");
 const eventMinuets = document.querySelector("main .counter .unit .minuets");
 const eventSeconds = document.querySelector("main .counter .unit .seconds");
-let eventYear = 2022;
+let eventYear = new Date().getFullYear();
+
+if (new Date().getDate() > 16 && new Date().getMonth() > 5) {
+	eventYear++;
+}
+
 let targetDate = new Date(`Jun 17, ${eventYear} 23:59:59`).getTime();
 
 let eventCounter = setInterval(() => {
